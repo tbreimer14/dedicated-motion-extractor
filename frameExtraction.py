@@ -1,19 +1,14 @@
 import cv2
 import os
-import imutils
 import numpy as np
 from pathlib import Path
 from ultralytics import YOLO
-import math
-import torch
 
 def extract():
     """
     For each .mp4 video in the input directory, tracks every moving object in frame, crops it, 
     and saves the image to a corresponding directory in the output directory.
     """
-
-    torch.no_grad()
 
     video_paths = getVideoFilesNames()
 
