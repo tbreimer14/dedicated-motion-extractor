@@ -32,7 +32,7 @@ def extract():
         # Create and switch to the output directory where we will store each frame,
         # which will be named ./output/<video_file_name>/frames/frame<counter>.png
 
-        frames_directory = dir_path + "/output/" + video_file_name + "/frames"
+        frames_directory = dir_path + "/output/" + video_file_name
         Path(frames_directory).mkdir(parents=True, exist_ok=True)
         os.chdir(frames_directory) 
 
@@ -41,7 +41,7 @@ def extract():
         counter = 0
         for image in images:
                 # Save each extracted image
-                cv2.imwrite(f'frame{counter}.png', image)
+                cv2.imwrite(f'img{counter}.png', image)
                 counter += 1
 
 
@@ -121,3 +121,4 @@ def getVideoFilesNames():
 
 
     
+
