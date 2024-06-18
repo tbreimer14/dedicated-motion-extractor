@@ -30,7 +30,7 @@ def extract():
         images = analyzeVideo(video_file_path)
 
         # Create and switch to the output directory where we will store each frame,
-        # which will be named ./output/<video_file_name>/frames/frame<counter>.png
+        # which will be named ./output/<video_file_name>/img<counter>.png
 
         frames_directory = dir_path + "/output/" + video_file_name
         Path(frames_directory).mkdir(parents=True, exist_ok=True)
